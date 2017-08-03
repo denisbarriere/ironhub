@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const Student = require('../models/student-model');
 require("dotenv").config(); // To connect to the database
 
+
 /**
  * MIDDLEWARE CONFIGURATION
 **/
@@ -17,41 +18,22 @@ mongoose.connect(process.env.MONGODB_URI); // Databse name from local .env
 **/
 const students = [
   {
-    bootcamp: {
-      campus: 'Barcelona',
-      program: 'Web Development Bootcamp',
-      date: new Date('2017-06-12'),
-      projectIds: [
-        '5980d14bb3cb55637f3969fd',
-        '5980d14bb3cb55637f3969fe'
-      ],
-    },
-    professional: {
-      urls: {
-        gitHub: 'https://github.com/denisbarriere',
-        linkedIn: 'https://www.linkedin.com/in/denisbarriere/',
-        webProjects: [
-          { 
-            title: 'Idecologie',
-            url: 'https://www.idecologie.net'
-          }
-        ]
-      },
+    bootcampIds: ['5983511cfb689ab18c25804b'],
+    professionalNetworks: {
+      gitHub: 'https://github.com/denisbarriere',
+      linkedIn: 'https://www.linkedin.com/in/denisbarriere/',
+      webProjects: [
+        { 
+          title: 'Idecologie',
+          url: 'https://www.idecologie.net'
+        }
+      ]
     },
   },
   {
-    bootcamp: {
-      campus: 'Barcelona',
-      program: 'Web Development Bootcamp',
-      date: new Date('2017-06-12'),
-      projectIds: [
-        '5980d14bb3cb55637f3969fe'
-      ],
-    },
-    professional: {
-      urls: {
-        gitHub: 'https://github.com/JB-Tellez',
-      },
+    bootcampIds: ['5983511cfb689ab18c25804b'],
+    professionalNetworks: {
+      gitHub: 'https://github.com/JB-Tellez',
     },
   },
 ]

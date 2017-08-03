@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema({
   phone: Number,
   bio: String,  
   pictureUrl: mongoose.SchemaTypes.Url,
-  social: {
+  socialNetworks: {
     Facebook: mongoose.SchemaTypes.Url,
     Instagram: mongoose.SchemaTypes.Url,
     skype: String,
@@ -50,7 +50,7 @@ const userSchema = new mongoose.Schema({
   studentId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Student'
-  }
+  },
 },
 {
   timestamps: {

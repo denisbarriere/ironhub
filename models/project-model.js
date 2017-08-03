@@ -26,20 +26,17 @@ const projectSchema = new mongoose.Schema({
   },
   description: String,
   urls: {
+    gitHub: { type: mongoose.SchemaTypes.Url, required: [true, 'GitHub URL is required'], },
+    productUrl: { type: mongoose.SchemaTypes.Url, required: [true, 'Product URL is required'], },
     projectImageUrl: mongoose.SchemaTypes.Url,
-    gitHub: {
-      type: mongoose.SchemaTypes.Url, 
-      required: [true, 'The GitHub URL is required']
-    },
-    screenshots: [{
-      title: String,
-      url: mongoose.SchemaTypes.Url
-    }],
-    productUrl: {
-      type: mongoose.SchemaTypes.Url, 
-      required: [true, 'The product URL is required']
-    },
-    presentationUrl: mongoose.SchemaTypes.Url,
+    screenshots: [
+      {
+        title: String,
+        url: mongoose.SchemaTypes.Url
+      }
+    ],
+    slidePresentationUrl: mongoose.SchemaTypes.Url,
+    videoPresentationUrl: mongoose.SchemaTypes.Url,
   },
 },
 {

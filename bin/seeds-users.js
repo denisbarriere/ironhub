@@ -34,7 +34,7 @@ const users = [
     phone: 645499586,
     bio: 'I am the program manager at Ironhack Barcelona',
     pictureUrl: 'https://secure.meetupstatic.com/photos/member/c/e/4/9/highres_266212809.jpeg',
-    social: {
+    socialNetworks: {
       skype: 'irene@ironhack.com',
       slack: '@irenedemas',
       twitter: '@palento'
@@ -54,13 +54,14 @@ const users = [
     city: 'Barcelona',
     phone: 684116853,
     bio: 'I am a Scrum Master, former Technical Business Analyst/Tester and Software Developer',
-    social: {
+    socialNetworks: {
       Facebook: 'https://www.facebook.com/denis.barriere',
       Instagram: 'https://www.instagram.com/the_aussie_shot/',
       skype: 'denis.barriere',
       slack: '@denis.barriere',
     },
     role: 'USER',
+    studentId: '598351360920f7b1a274e536',
   },
   {
     email: 'jb.tellez@gmail.com',
@@ -73,10 +74,11 @@ const users = [
     postCode: '98108',
     city: 'Seattle',
     bio: 'Hi, I am JB Tellez and I am doing the Iron Hack Web Development Bootcamp!',
-    social: {
+    socialNetworks: {
       slack: '@jb.tellez',
     },
     role: 'USER',
+    studentId: '598351360920f7b1a274e538',
   },
 ]
 

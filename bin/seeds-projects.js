@@ -21,6 +21,7 @@ const projects = [
     name: 'M Y F O L T',
     contributors: ['5982f74c6a05fc8ef0d9ff5e'],
     endOfModuleProject: 'Module 1',
+    shortDescription: 'Javascript version of F O L T, the iOS game',
     description: 'Javascript version of F O L T, the iOS game',
     urls: {
       gitHub: 'https://github.com/denisbarriere/ironhack-game',
@@ -34,6 +35,7 @@ const projects = [
     name: 'Ironhelp',
     contributors: ['5982f74c6a05fc8ef0d9ff5e', '5982f74c6a05fc8ef0d9ff5f'],
     endOfModuleProject: 'Module 2',
+    shortDescription: 'The best documentation platform for developers',
     description: 'The best documentation platform for developers, built by the community',
     urls: {
       gitHub: 'https://github.com/denisbarriere/ironhelp',

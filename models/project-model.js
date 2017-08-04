@@ -24,6 +24,7 @@ const projectSchema = new mongoose.Schema({
 		enum: ['Module 1', 'Module 2', 'Final'],
     default: 'Module 1'
   },
+  shortDescription: { type: String, maxlength: 100 },
   description: String,
   urls: {
     gitHub: { type: mongoose.SchemaTypes.Url, required: [true, 'GitHub URL is required'], },

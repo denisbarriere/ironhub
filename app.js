@@ -24,7 +24,7 @@ const database = require('./config/database');
 const bootcampsApiRoutes = require('./routes/api/v1.0/bootcamps');
 const ironhackersApiRoutes = require('./routes/api/v1.0/ironhackers');
 const projectsApiRoutes = require('./routes/api/v1.0/projects');
-const userAuth = require('./routes/user-auth');
+const userAuth = require('./routes/api/v1.0/user-auth');
 
 
 /**
@@ -35,18 +35,20 @@ const app = express();
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Enable communication between the express API and the Angular 2 front-end
+app.use(cors());
+
 //app.use(express.static(path.join(__dirname, 'public')));
 
 
 /**
  * ROUTES
 **/
-app.use('/', userAuth);
-// app.use('/api/v1.0/ironhackers', passport.authenticate('jwt', {session: false}), ironhackersApiRoutes);
-// app.use('/api/v1.0/projects', passport.authenticate('jwt', {session: false}), projectssApiRoutes);
-app.use('/api/v1.0/bootcamps', bootcampsApiRoutes);
-app.use('/api/v1.0/ironhackers', ironhackersApiRoutes);
-app.use('/api/v1.0/projects', projectsApiRoutes);
+app.use('/api/v1.0/', userAuth);
+app.use('/api/v1.0/', passport.authenticate('jwt', {session: false}), bootcampsApiRoutes);
+app.use('/api/v1.0/', passport.authenticate('jwt', {session: false}), ironhackersApiRoutes);
+app.use('/api/v1.0/', passport.authenticate('jwt', {session: false}), projectsApiRoutes);
 
 
 // catch 404 and forward to error handler

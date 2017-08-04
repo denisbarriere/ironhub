@@ -21,7 +21,7 @@ const router = express.Router();
 /* GET /projects => retrieve the list of all projects
    GET /projects?ironhacker= => retrieve the list of project of a specific ironhacker (User)
 */
-router.get('/', (req, res, next) => {
+router.get('/projects', (req, res, next) => {
   
   // Retrieve query string from URL, if any
   const ironhacker = req.query.ironhacker;
@@ -74,7 +74,7 @@ router.get('/', (req, res, next) => {
 
 
 // POST /projects => to create a new project
-router.post('/', (req, res, next) => {
+router.post('/projects', (req, res, next) => {
   
   // Retrieve the information to update
   // For each value, check if it is found in request before processing it
@@ -122,7 +122,7 @@ router.post('/', (req, res, next) => {
 
 
 // GET /projects/:id => to retrive the information of a specific project
-router.get('/:id', (req, res) => {
+router.get('/projects/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -154,7 +154,7 @@ router.get('/:id', (req, res) => {
 
 
 // PUT /projects/:id => to update the information of a specific project
-router.put('/:id', (req, res) => {
+router.put('/projects/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -215,7 +215,7 @@ router.put('/:id', (req, res) => {
 
 
 // PUT /projects/:id/contributors => to add new contributors to a project
-router.put('/:id/contributors', (req, res) => {
+router.put('/projects/:id/contributors', (req, res) => {
   
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -267,7 +267,7 @@ router.put('/:id/contributors', (req, res) => {
 
 
 // DELETE /projects/:id to delete a specific project
-router.delete('/:id', (req, res) => {
+router.delete('/projects/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {

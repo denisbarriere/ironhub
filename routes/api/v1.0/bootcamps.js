@@ -20,7 +20,7 @@ const router = express.Router();
 // BOOTCAMPS
 
 // GET /bootcamps => retrieve the list of all bootcamps
-router.get('/', (req, res, next) => {
+router.get('/bootcamps', (req, res, next) => {
 
   // Retrive the bootcamp information
   Bootcamp.find({}, (err, bootcampList) => {
@@ -36,7 +36,7 @@ router.get('/', (req, res, next) => {
 
 
 // POST /bootcamps => to create a new bootcamp
-router.post('/', (req, res, next) => {
+router.post('/bootcamps', (req, res, next) => {
   
   // Retrieve the information to update
   // For each value, check if it is found in request before processing it
@@ -72,7 +72,7 @@ router.post('/', (req, res, next) => {
 
 
 // GET /bootcamps/:id => to retrive the information of a specific bootcamp
-router.get('/:id', (req, res) => {
+router.get('/bootcamps/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -104,7 +104,7 @@ router.get('/:id', (req, res) => {
 
 
 // PUT /bootcamps/:id => to update the information of a specific bootcamp
-router.put('/:id', (req, res) => {
+router.put('/bootcamps/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -153,7 +153,7 @@ router.put('/:id', (req, res) => {
 
 
 // PUT /bootcamps/:id/students => to add new students to a bootcamp
-router.put('/:id/students', (req, res) => {
+router.put('/bootcamps/:id/students', (req, res) => {
   
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -205,7 +205,7 @@ router.put('/:id/students', (req, res) => {
 
 
 // DELETE /bootcamps/:id to delete a specific bootcamp
-router.delete('/:id', (req, res) => {
+router.delete('/bootcamps/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {

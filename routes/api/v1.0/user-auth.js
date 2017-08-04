@@ -2,10 +2,10 @@
  * MIDDLEWARE IMPORT
 **/
 const express = require('express');
-const passport = require('../config/passport');
+const passport = require('../../../config/passport');
 const jwt = require('jsonwebtoken');
-const jwtOptions = require('../config/jwt');
-const User = require('../models/user-model');
+const jwtOptions = require('../../../config/jwt');
+const User = require('../../../models/user-model');
 const bcrypt = require('bcrypt');
 
 
@@ -69,7 +69,7 @@ router.post('/login', (req, res, next) => {
     return;
   }
 
-  User.findOne({'email': email}, '_id email password', (err, user) => {
+  User.findOne({'email': email}, '_id email password role firstName', (err, user) => {
     if (!user) {
       res.status(401).json({ message: 'The email or password is incorrect' });
       return;

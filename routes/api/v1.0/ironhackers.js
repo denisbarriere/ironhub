@@ -21,25 +21,31 @@ const router = express.Router();
 // IRONHACKERS
 
 // GET /ironhackers => retrieve the list of all ironhackers (Students)
-router.get('/', (req, res, next) => {
+router.get('/ironhackers', (req, res, next) => {
 
   // Retrive the ironhacker information
   User.find({studentId: { $exists: true }})
-    .populate('studentId')
+    .populate({ 
+     path: 'studentId',
+     populate: {
+       path: 'bootcampIds',
+       model: 'Bootcamp'
+     }
+    })
     .exec((err, ironhackerList) => {
       if (err) {
       res.status(400).json(err);
       return;
     }
 
-  res.status(200).json({ironhackerList});
+    res.status(200).json({ironhackerList});
 
   });
 });
 
 
 // POST /ironhackers => to create a new ironhacker
-router.post('/', (req, res, next) => {
+router.post('/ironhackers', (req, res, next) => {
   
   // Retrieve the information to update
   // For each ironhacker value, check if it is found in request before processing it
@@ -126,7 +132,7 @@ router.post('/', (req, res, next) => {
 
 
 // GET /ironhackers/:id => to retrive the information of a specific ironhacker
-router.get('/:id', (req, res) => {
+router.get('/ironhackers/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -136,7 +142,13 @@ router.get('/:id', (req, res) => {
 
   // Find the ironhacker to retrieve
   User.find({'_id': req.params.id, studentId: { $exists: true }})
-    .populate('studentId')
+    .populate({ 
+     path: 'studentId',
+     populate: {
+       path: 'bootcampIds',
+       model: 'Bootcamp'
+     }
+    })
     .exec((err, theIronhacker) => {
       
     // If an error occured
@@ -160,7 +172,7 @@ router.get('/:id', (req, res) => {
 
 
 // PUT /ironhackers/:id => to update the information of a specific ironhacker
-router.put('/:id', (req, res) => {
+router.put('/ironhackers/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -209,7 +221,7 @@ router.put('/:id', (req, res) => {
 
 
 // DELETE /ironhackers/:id to delete a specific ironhacker
-router.delete('/:id', (req, res) => {
+router.delete('/ironhackers/:id', (req, res) => {
 
   // Check that the id found in the params is valid
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {

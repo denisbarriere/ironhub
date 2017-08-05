@@ -37,7 +37,10 @@ router.get('/projects', (req, res, next) => {
     }
 
     // If the ID is valid
-    Project.find({contributors: mongoose.Types.ObjectId(ironhacker)}, 'name contributors endOfModuleProject shortDescription urls.projectImageUrl', (err, allProjects) => {
+    Project.find({contributors: mongoose.Types.ObjectId(ironhacker)}, 
+      'name contributors endOfModuleProject shortDescription urls.projectImageUrl')
+      .populate('contributors')
+      .exec((err, allProjects) => {
      
       // If an error occured
       if (err) {
@@ -60,7 +63,10 @@ router.get('/projects', (req, res, next) => {
   // Else, load all projects
   } else {
 
-    Project.find({}, 'name contributors endOfModuleProject shortDescription urls.projectImageUrl', (err, projectList) => {
+    Project.find({},
+      'name contributors endOfModuleProject shortDescription urls.projectImageUrl')
+        .populate('contributors')
+        .exec((err, projectList) => {
       
       if (err) {
         res.status(400).json(err);

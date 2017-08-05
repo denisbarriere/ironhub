@@ -33,7 +33,10 @@ const userSchema = new mongoose.Schema({
   city: String,
   phone: Number,
   bio: String,  
-  pictureUrl: mongoose.SchemaTypes.Url,
+  pictureUrl: { 
+    type: mongoose.SchemaTypes.Url,
+    default: 'http://learnonline.canberra.edu.au/theme/image.php/uc/core/1499280925/u/f1'
+  },
   socialNetworks: {
     Facebook: mongoose.SchemaTypes.Url,
     Instagram: mongoose.SchemaTypes.Url,

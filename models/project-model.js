@@ -16,8 +16,7 @@ const projectSchema = new mongoose.Schema({
   },
   contributors: [{
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      default: 'Ironhacker'
+      ref: 'User'
   }],
   endOfModuleProject: {
     type: String,

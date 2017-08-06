@@ -137,7 +137,10 @@ router.get('/projects/:id', (req, res) => {
   }
 
   // Find the project to retrieve
-  Project.findById(req.params.id, 'name endOfModuleProject type urls contributors description', (err, theProject) => {
+  Project.findById(req.params.id, 
+    'name endOfModuleProject type urls contributors description')
+    .populate('contributors')
+    .exec((err, theProject) => {
       
     // If an error occured
       if (err) {
@@ -282,10 +285,16 @@ router.delete('/projects/:id', (req, res) => {
   }
    
   // Else, everything went well. The project has been found
-  theProject.remove(req.params.id, (err, removed) => {
+  Project.remove({_id: req.params.id}, (err, removed) => {
     if (err) {
       res.status(400).json(err);
       return;
+    }
+console.log(removed.documents);
+    if(!removed || removed.length === 0) {
+      res.status(404).json({
+        message: 'Project not found'
+      });
     }
 
     return res.status(200).json({

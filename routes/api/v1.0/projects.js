@@ -137,7 +137,7 @@ router.get('/projects/:id', (req, res) => {
   }
 
   // Find the project to retrieve
-  Project.findById(req.params.id, 'name, endOfModuleProject, urls, contributors, description', (err, theProject) => {
+  Project.findById(req.params.id, 'name endOfModuleProject urls contributors description', (err, theProject) => {
       
     // If an error occured
       if (err) {
@@ -280,34 +280,17 @@ router.delete('/projects/:id', (req, res) => {
     res.status(400).json({ message: 'Specified id is not valid' });
     return;
   }
-
-  // Retrieve the project to remove
-  Project.findById(req.params.id, (err, theProject) => {
-    // If an error occured
+   
+  // Else, everything went well. The project has been found
+  theProject.remove(req.params.id, (err, removed) => {
     if (err) {
       res.status(400).json(err);
       return;
     }
-    
-    // If the project was not found
-    if(!theProject || theProject.length === 0) {
-      res.status(404).json({
-        message: 'Project not found'
-        });
-      return;
-    }
 
-    // Else, everything went well. The project has been found
-    theProject.remove((err, removed) => {
-      if (err) {
-        res.status(400).json(err);
-        return;
-      }
-
-      return res.status(200).json({
-        message: 'The project has been removed successfully'
-      });
-    })
+    return res.status(200).json({
+      message: 'The project has been removed successfully'
+    });
   });
 });
 

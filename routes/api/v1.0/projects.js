@@ -137,7 +137,7 @@ router.get('/projects/:id', (req, res) => {
   }
 
   // Find the project to retrieve
-  Project.findById(req.params.id, 'name endOfModuleProject urls contributors description', (err, theProject) => {
+  Project.findById(req.params.id, 'name endOfModuleProject type urls contributors description', (err, theProject) => {
       
     // If an error occured
       if (err) {

@@ -21,6 +21,7 @@ const projects = [
     name: 'M Y F O L T',
     contributors: ['5982f74c6a05fc8ef0d9ff5e'],
     endOfModuleProject: 'Module 1',
+    type: 'Web Dev',
     shortDescription: 'Javascript version of F O L T, the iOS game',
     description: 'Javascript version of F O L T, the iOS game',
     urls: {
@@ -35,6 +36,7 @@ const projects = [
     name: 'Ironhelp',
     contributors: ['5982f74c6a05fc8ef0d9ff5e', '5982f74c6a05fc8ef0d9ff5f'],
     endOfModuleProject: 'Module 2',
+    type: 'UI/UX',
     shortDescription: 'The best documentation platform for developers',
     description: 'The best documentation platform for developers, built by the community',
     urls: {

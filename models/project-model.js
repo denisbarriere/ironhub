@@ -23,10 +23,14 @@ const projectSchema = new mongoose.Schema({
 		enum: ['Module 1', 'Module 2', 'Final'],
     default: 'Module 1'
   },
+  type: {
+    type: String,
+		enum: ['Web Dev', 'UI/UX']
+  },
   shortDescription: { type: String, maxlength: 100 },
   description: String,
   urls: {
-    gitHub: { type: mongoose.SchemaTypes.Url, required: [true, 'GitHub URL is required'], },
+    gitHub: { type: mongoose.SchemaTypes.Url },
     productUrl: { type: mongoose.SchemaTypes.Url, required: [true, 'Product URL is required'], },
     projectImageUrl: mongoose.SchemaTypes.Url,
     screenshots: [

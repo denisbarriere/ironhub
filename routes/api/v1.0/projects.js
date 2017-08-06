@@ -38,7 +38,7 @@ router.get('/projects', (req, res, next) => {
 
     // If the ID is valid
     Project.find({contributors: mongoose.Types.ObjectId(ironhacker)}, 
-      'name contributors endOfModuleProject shortDescription urls.projectImageUrl')
+      'name contributors endOfModuleProject type shortDescription urls.projectImageUrl')
       .populate('contributors')
       .exec((err, allProjects) => {
      
@@ -64,7 +64,7 @@ router.get('/projects', (req, res, next) => {
   } else {
 
     Project.find({},
-      'name contributors endOfModuleProject shortDescription urls.projectImageUrl')
+      'name contributors endOfModuleProject type shortDescription urls.projectImageUrl')
         .populate('contributors')
         .exec((err, projectList) => {
       

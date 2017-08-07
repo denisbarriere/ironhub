@@ -41,7 +41,7 @@ router.get('/projects', (req, res, next) => {
 
     // If the ID is valid
     Project.find({contributors: mongoose.Types.ObjectId(ironhacker)}, 
-      'name contributors endOfModuleProject type shortDescription urls.projectImageUrl')
+      'name contributors endOfModuleProject shortDescription urls.projectImageUrl')
       .populate('contributors')
       .exec((err, allProjects) => {
      
@@ -71,7 +71,7 @@ router.get('/projects', (req, res, next) => {
     let _offset = Number(offset);
 
     Project.find({},
-      'name contributors endOfModuleProject type shortDescription urls.projectImageUrl')
+      'name contributors endOfModuleProject shortDescription urls.projectImageUrl')
         .populate('contributors')
         .skip(_offset > 0 ? _offset: 0)
         .limit(_limit)
@@ -88,7 +88,7 @@ router.get('/projects', (req, res, next) => {
   } else {
 
     Project.find({},
-      'name contributors endOfModuleProject type shortDescription urls.projectImageUrl')
+      'name contributors endOfModuleProject shortDescription urls.projectImageUrl')
         .populate('contributors')
         .exec((err, projectList) => {
       
@@ -139,6 +139,7 @@ router.post('/projects', (req, res, next) => {
   theProject.save((err) => {
     if (err) {
       res.status(400).json(err);
+      console.log(err)
       return;
     }
 

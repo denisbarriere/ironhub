@@ -19,12 +19,15 @@ const router = express.Router();
 // PROJECTS
 
 /* GET /projects => retrieve the list of all projects
+   GET /projects?limit=&offset= => retrive the a limited set of projects (number of projects = limit, from = offset)
    GET /projects?ironhacker= => retrieve the list of project of a specific ironhacker (User)
 */
 router.get('/projects', (req, res, next) => {
   
   // Retrieve query string from URL, if any
   const ironhacker = req.query.ironhacker;
+  const limit = req.query.limit;
+  const offset = req.query.offset;
   
   // If 'ironhacker' is found in the query,
   // then only get the projects that ironhacker contributed to
@@ -60,6 +63,27 @@ router.get('/projects', (req, res, next) => {
       res.status(200).json(allProjects);
     });
 
+  // Else, load a specific set of projects 
+  } else if (limit && offset) {
+
+    // Convert to number (comes as string from the query)
+    let _limit = Number(limit);
+    let _offset = Number(offset);
+
+    Project.find({},
+      'name contributors endOfModuleProject type shortDescription urls.projectImageUrl')
+        .populate('contributors')
+        .skip(_offset > 0 ? _offset: 0)
+        .limit(_limit)
+        .exec((err, projectList) => {
+      
+      if (err) {
+        res.status(400).json(err);
+        return;
+      }
+
+      res.status(200).json(projectList);
+    });
   // Else, load all projects
   } else {
 

@@ -91,7 +91,15 @@ router.post('/login', (req, res, next) => {
 
 // TOKEN
 router.get('/token', passport.authenticate('jwt', { session: false }), (req, res) => {
-  res.json(true);
+
+  // Get the user information relevant to the session
+  User.findOne({'_id': req.user._id}, '_id email password role firstName', (err, user) => {
+    if (!user) {
+      res.status(401).json({ message: 'The email or password is incorrect' });
+      return;
+    }
+    res.status(200).json({ user: user });
+  });
 });
 
 module.exports = router;

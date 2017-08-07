@@ -20,7 +20,7 @@ const projectSchema = new mongoose.Schema({
   }],
   endOfModuleProject: {
     type: String,
-		enum: ['Module 1', 'Module 2', 'Final'],
+		enum: ['Module 1', 'Module 2', 'Module 3'],
     default: 'Module 1'
   },
   type: {

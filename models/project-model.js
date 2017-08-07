@@ -23,10 +23,6 @@ const projectSchema = new mongoose.Schema({
 		enum: ['Module 1', 'Module 2', 'Module 3'],
     default: 'Module 1'
   },
-  type: {
-    type: String,
-		enum: ['Web Dev', 'UI/UX']
-  },
   shortDescription: { type: String, maxlength: 100 },
   description: String,
   urls: {

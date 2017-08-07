@@ -117,6 +117,7 @@ router.post('/projects', (req, res, next) => {
     });
   }
   if (req.body.endOfModuleProject) { newProject.endOfModuleProject = req.body.endOfModuleProject; }
+  if (req.body.shortDescription) { newProject.shortDescription = req.body.shortDescription; }  
   if (req.body.description) { newProject.description = req.body.description; }
   if ( req.body.urls ) {
     newProject.urls = {}; // if the .urls is found, then initialise it in the newProject object
@@ -163,7 +164,7 @@ router.get('/projects/:id', (req, res) => {
 
   // Find the project to retrieve
   Project.findById(req.params.id, 
-    'name endOfModuleProject type urls contributors description')
+    'name endOfModuleProject shortDescription urls contributors description')
     .populate('contributors')
     .exec((err, theProject) => {
       
@@ -196,6 +197,8 @@ router.put('/projects/:id', (req, res) => {
     return;
   }
 
+  console.log(req.body);
+
   // Retrieve the information to update
   // For each value, check if it is found in request before processing it
   let updates = {}
@@ -207,9 +210,10 @@ router.put('/projects/:id', (req, res) => {
     });
   }
   if (req.body.endOfModuleProject) { updates.endOfModuleProject = req.body.endOfModuleProject; }
+  if (req.body.shortDescription) { updates.shortDescription = req.body.shortDescription; }
   if (req.body.description) { updates.description = req.body.description; }
   if ( req.body.urls ) {
-    newProject.urls = {}; // if the .urls is found, then initialise it in the newProject object
+    updates.urls = {}; // if the .urls is found, then initialise it in the updates object
     if (req.body.urls.gitHub) { updates.urls.gitHub = req.body.urls.gitHub; }
     if (req.body.urls.screenshots) { 
       updates.urls.screenshots = [];

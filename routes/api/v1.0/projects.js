@@ -117,7 +117,7 @@ router.post('/projects', (req, res, next) => {
     });
   }
   if (req.body.endOfModuleProject) { newProject.endOfModuleProject = req.body.endOfModuleProject; }
-  if (req.body.tagLine) { updates.tagLine = req.body.tagLine; }
+  if (req.body.tagline) { updates.tagline = req.body.tagline; }
   if (req.body.shortDescription) { newProject.shortDescription = req.body.shortDescription; }  
   if (req.body.description) { newProject.description = req.body.description; }
   if (req.body.hashtags) { updates.hashtags = req.body.hashtags; }
@@ -166,7 +166,7 @@ router.get('/projects/:id', (req, res) => {
 
   // Find the project to retrieve
   Project.findById(req.params.id, 
-    'name tagLine shortDescription description endOfModuleProject urls contributors hashtags')
+    'name tagline shortDescription description endOfModuleProject urls contributors hashtags')
     .populate('contributors')
     .exec((err, theProject) => {
       
@@ -212,7 +212,7 @@ router.put('/projects/:id', (req, res) => {
     });
   }
   if (req.body.endOfModuleProject) { updates.endOfModuleProject = req.body.endOfModuleProject; }
-  if (req.body.tagLine) { updates.tagLine = req.body.tagLine; }
+  if (req.body.tagline) { updates.tagline = req.body.tagline; }
   if (req.body.shortDescription) { updates.shortDescription = req.body.shortDescription; }
   if (req.body.description) { updates.description = req.body.description; }
   if (req.body.hashtags) { updates.hashtags = req.body.hashtags; }  

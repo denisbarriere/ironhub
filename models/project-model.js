@@ -23,8 +23,10 @@ const projectSchema = new mongoose.Schema({
 		enum: ['Module 1', 'Module 2', 'Module 3'],
     default: 'Module 1'
   },
+  tagLine: { type: String, maxlength: 100 },
   shortDescription: { type: String, maxlength: 100 },
   description: String,
+  hashtags: [String],
   urls: {
     gitHub: { type: mongoose.SchemaTypes.Url },
     productUrl: { type: mongoose.SchemaTypes.Url, required: [true, 'Product URL is required'], },

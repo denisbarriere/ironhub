@@ -21,9 +21,10 @@ const projects = [
     name: 'M Y F O L T',
     contributors: ['5982f74c6a05fc8ef0d9ff5e'],
     endOfModuleProject: 'Module 1',
-    type: 'Web Dev',
+    tagLine: 'Javascript version of F O L T, the iOS game',
     shortDescription: 'Javascript version of F O L T, the iOS game',
     description: 'Javascript version of F O L T, the iOS game',
+    hashtags: ['#js','#game'],
     urls: {
       gitHub: 'https://github.com/denisbarriere/ironhack-game',
       productUrl: 'https://denisbarriere.github.io/ironhack-game/',
@@ -36,9 +37,10 @@ const projects = [
     name: 'Ironhelp',
     contributors: ['5982f74c6a05fc8ef0d9ff5e', '5982f74c6a05fc8ef0d9ff5f'],
     endOfModuleProject: 'Module 2',
-    type: 'UI/UX',
+    tagLine: 'The best documentation platform for developers',
     shortDescription: 'The best documentation platform for developers',
     description: 'The best documentation platform for developers, built by the community',
+    hashtags: ['#js','#express','mongodb'],
     urls: {
       gitHub: 'https://github.com/denisbarriere/ironhelp',
       productUrl: 'https://ironhelp.herokuapp.com',

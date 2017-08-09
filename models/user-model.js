@@ -32,14 +32,17 @@ const userSchema = new mongoose.Schema({
   postCode: String,
   city: String,
   phone: Number,
-  bio: String,  
+  bio: { 
+    type: String,
+    maxlength: 80
+  },
   pictureUrl: { 
     type: mongoose.SchemaTypes.Url,
     default: 'http://learnonline.canberra.edu.au/theme/image.php/uc/core/1499280925/u/f1'
   },
   socialNetworks: {
-    Facebook: mongoose.SchemaTypes.Url,
-    Instagram: mongoose.SchemaTypes.Url,
+    facebook: mongoose.SchemaTypes.Url,
+    instagram: mongoose.SchemaTypes.Url,
     skype: String,
     slack: String,
     twitter: String,

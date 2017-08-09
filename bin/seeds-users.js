@@ -46,7 +46,7 @@ const users = [
     password: hashPass,
     gender: 'Male',
     firstName: 'Denis',
-    lastName: 'Denis',
+    lastName: 'Barriere',
     dateOfBirth: new Date("1981-10-10"),
     nationality: ['France', 'Australia'],
     address: 'Carrer de Vallirana, 40',

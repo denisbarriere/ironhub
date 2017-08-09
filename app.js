@@ -21,10 +21,10 @@ const database = require('./config/database');
 /**
  * ROUTE FILES
 **/
-const bootcampsApiRoutes = require('./routes/api/v1.0/bootcamps');
-const ironhackersApiRoutes = require('./routes/api/v1.0/ironhackers');
-const projectsApiRoutes = require('./routes/api/v1.0/projects');
-const userAuth = require('./routes/api/v1.0/user-auth');
+const bootcampsApiRoutes = require('./routes/api/v1/bootcamps');
+const ironhackersApiRoutes = require('./routes/api/v1/ironhackers');
+const projectsApiRoutes = require('./routes/api/v1/projects');
+const userAuth = require('./routes/api/v1/user-auth');
 
 
 /**

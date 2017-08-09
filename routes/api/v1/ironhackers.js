@@ -166,7 +166,7 @@ router.get('/ironhackers/:id', (req, res) => {
       }
 
       // Else, everything went well
-      res.status(200).json(theIronhacker);
+      res.status(200).json(theIronhacker[0]);
     });
 });
 

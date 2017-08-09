@@ -45,10 +45,10 @@ app.use(cors());
 /**
  * ROUTES
 **/
-app.use('/api/v1.0/', userAuth);
-app.use('/api/v1.0/', passport.authenticate('jwt', {session: false}), bootcampsApiRoutes);
-app.use('/api/v1.0/', passport.authenticate('jwt', {session: false}), ironhackersApiRoutes);
-app.use('/api/v1.0/', passport.authenticate('jwt', {session: false}), projectsApiRoutes);
+app.use('/api/v1/', userAuth);
+app.use('/api/v1/', passport.authenticate('jwt', {session: false}), bootcampsApiRoutes);
+app.use('/api/v1/', passport.authenticate('jwt', {session: false}), ironhackersApiRoutes);
+app.use('/api/v1/', passport.authenticate('jwt', {session: false}), projectsApiRoutes);
 
 
 // catch 404 and forward to error handler

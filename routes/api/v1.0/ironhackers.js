@@ -38,7 +38,7 @@ router.get('/ironhackers', (req, res, next) => {
       return;
     }
 
-    res.status(200).json({ironhackerList});
+    res.status(200).json(ironhackerList);
 
   });
 });

@@ -113,7 +113,7 @@ const students = [
       webProjects: [
         { 
           title: 'ANDREA BRAVO',
-          url: 'https://www.andreabravo.com'
+          url: 'http://www.andreabravo.com'
         }
       ]
     },

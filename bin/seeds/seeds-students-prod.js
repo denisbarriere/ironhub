@@ -2,7 +2,7 @@
  * MIDDLEWARE IMPORT
 **/
 const mongoose = require('mongoose');
-const Student = require('../models/student-model');
+const Student = require('../../models/student-model');
 require("dotenv").config(); // To connect to the database
 
 
@@ -18,7 +18,8 @@ mongoose.connect(process.env.MONGODB_URI); // Databse name from local .env
 **/
 const students = [
   {
-    bootcampIds: ['5983511cfb689ab18c25804b'],
+    // Denis Barriere
+    bootcampIds: ['598c85b230b3a200113de089'],
     professionalNetworks: {
       gitHub: 'https://github.com/denisbarriere',
       linkedIn: 'https://www.linkedin.com/in/denisbarriere/',
@@ -30,6 +31,7 @@ const students = [
       ]
     },
   },
+
   {
     bootcampIds: ['5983511cfb689ab18c25804b'],
     professionalNetworks: {

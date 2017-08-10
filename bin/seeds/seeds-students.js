@@ -2,7 +2,7 @@
  * MIDDLEWARE IMPORT
 **/
 const mongoose = require('mongoose');
-const Student = require('../models/student-model');
+const Student = require('../../models/student-model');
 require("dotenv").config(); // To connect to the database
 
 

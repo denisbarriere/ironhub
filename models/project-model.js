@@ -29,7 +29,7 @@ const projectSchema = new mongoose.Schema({
   hashtags: [String],
   urls: {
     gitHub: { type: mongoose.SchemaTypes.Url },
-    productUrl: { type: mongoose.SchemaTypes.Url, required: [true, 'Product URL is required'], },
+    productUrl: { type: mongoose.SchemaTypes.Url },
     projectImageUrl: mongoose.SchemaTypes.Url,
     screenshots: [
       {

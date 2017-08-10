@@ -3,7 +3,7 @@
 **/
 const mongoose = require('mongoose');
 const bcrypt   = require('bcrypt');
-const User = require('../models/user-model');
+const User = require('../../models/user-model');
 require("dotenv").config(); // To connect to the database
 
 
@@ -24,6 +24,28 @@ const hashPass = bcrypt.hashSync(process.env.MONGODB_DEFAULT_PWD, salt);
 **/
 const users = [
   {
+    email: 'denis.barriere@gmail.com',
+    password: hashPass,
+    gender: 'Male',
+    firstName: 'Denis',
+    lastName: 'Barriere',
+    dateOfBirth: new Date("1981-10-10"),
+    nationality: ['France', 'Australia'],
+    address: 'Carrer de Vallirana, 40, principal 1',
+    postCode: '08006',
+    city: 'Barcelona',
+    phone: 684116853,
+    bio: 'I am a Scrum Master, former Technical Business Analyst & Tester and C# Developer',
+    socialNetworks: {
+      facebook: 'https://www.facebook.com/denis.barriere',
+      instagram: 'https://www.instagram.com/the_aussie_shot/',
+      skype: 'denis.barriere',
+      slack: '@denis.barriere',
+    },
+    role: 'USER',
+    studentId: '598351360920f7b1a274e536',
+  },
+  {
     email: 'cillian.murchu@gmail.com',
     password: hashPass,
     gender: 'Male',
@@ -40,28 +62,6 @@ const users = [
       twitter: '@palento'
     },
     role: 'ADMIN',
-  },
-  {
-    email: 'denis.barriere@gmail.com',
-    password: hashPass,
-    gender: 'Male',
-    firstName: 'Denis',
-    lastName: 'Barriere',
-    dateOfBirth: new Date("1981-10-10"),
-    nationality: ['France', 'Australia'],
-    address: 'Carrer de Vallirana, 40',
-    postCode: '08006',
-    city: 'Barcelona',
-    phone: 684116853,
-    bio: 'I am a Scrum Master, former Technical Business Analyst & Tester and C# Developer',
-    socialNetworks: {
-      facebook: 'https://www.facebook.com/denis.barriere',
-      instagram: 'https://www.instagram.com/the_aussie_shot/',
-      skype: 'denis.barriere',
-      slack: '@denis.barriere',
-    },
-    role: 'USER',
-    studentId: '598351360920f7b1a274e536',
   },
   {
     email: 'jb.tellez@gmail.com',

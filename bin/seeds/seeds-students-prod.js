@@ -36,7 +36,7 @@ const students = [
     bootcampIds: ['598c85b230b3a200113de089'],
     professionalNetworks: {
       gitHub: 'https://github.com/Chilliano',
-      linkedIn: 'https://github.com/Chilliano',
+      linkedIn: 'https://www.linkedin.com/in/spuca/',
     },
   },
   {
@@ -59,7 +59,7 @@ const students = [
     bootcampIds: ['598c85b230b3a200113de089'],
     professionalNetworks: {
       gitHub: 'https://github.com/chrikoudi',
-      linkedIn: 'linkedin.com/in/christianakoudigkeli/',
+      linkedIn: 'https://www.linkedin.com/in/christianakoudigkeli/',
     },
   },
   {
@@ -67,7 +67,7 @@ const students = [
     bootcampIds: ['598c85b230b3a200113de089'],
     professionalNetworks: {
       dribbble: 'https://dribbble.com/Adamanska',
-      gitHub: 'github.com/AdamanskaHub',
+      gitHub: 'https://github.com/AdamanskaHub',
       linkedIn: 'https://www.linkedin.com/in/emilie-gourmanel-19659123/',
       portfolio: 'https://www.behance.net/Adamanska',
     },

@@ -27,8 +27,8 @@ const projects = [
     urls: {
       gitHub: 'https://github.com/denisbarriere/ironhack-game',
       productUrl: 'https://denisbarriere.github.io/ironhack-game/',
-      projectImageUrl: 'http://i.imgur.com/dzQkkW3.png',
-      slidePresentationUrl: 'http://slides.com/denisbarriere/m-y-f-o-l-t',
+      projectImageUrl: 'https://i.imgur.com/dzQkkW3.png',
+      slidePresentationUrl: 'https://slides.com/denisbarriere/m-y-f-o-l-t',
     }
   },
   {
@@ -42,7 +42,7 @@ const projects = [
       gitHub: 'https://github.com/denisbarriere/ironhelp',
       productUrl: 'https://ironhelp.herokuapp.com',
       projectImageUrl: 'https://s3.amazonaws.com/media-p.slid.es/uploads/733340/images/4001613/ironhelp-logo--green.png',
-      slidePresentationUrl: 'http://slides.com/denisbarriere/ironhelp',
+      slidePresentationUrl: 'https://slides.com/denisbarriere/ironhelp',
     }
   },
   {
@@ -82,7 +82,7 @@ const projects = [
       productUrl: 'https://appli-app.herokuapp.com/',
       screenshots: [{
         title: "Dashboard",
-        url: "http://i.imgur.com/w6ZnWxV.png"
+        url: "https://i.imgur.com/w6ZnWxV.png"
       }],
     }
   },
@@ -96,7 +96,7 @@ const projects = [
     urls: {
       gitHub: 'https://github.com/mi6u3l/parksocial',
       productUrl: 'https://appli-app.herokuapp.com/',
-      projectImageUrl: 'http://i.imgur.com/mC6soXB.png',
+      projectImageUrl: 'https://i.imgur.com/mC6soXB.png',
       screenshots: [{
         title: "Dashboard",
         url: "https://camo.githubusercontent.com/2c8b197fe7d6b06e1b01c65ea6627b71090fde79/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f7061726b736f6369616c2d3137353231362e61707073706f742e636f6d2f6f2f696d616765732532467061726b736f6369616c2e706e673f616c743d6d6564696126746f6b656e3d37346238323131652d343330342d343333392d386133322d303933623066343662333137"

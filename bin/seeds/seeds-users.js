@@ -38,6 +38,7 @@ const users = [
     country: 'Spain',
     phone: '+34 684 116 853',
     bio: 'I am a Scrum Master, former Technical Business Analyst & Tester and C# Developer',
+    pictureUrl: "https://i.imgur.com/6A25UGk.png",
     socialNetworks: {
       facebook: 'https://www.facebook.com/denis.barriere',
       instagram: 'https://www.instagram.com/the_aussie_shot/',
@@ -84,7 +85,7 @@ const users = [
     country: 'Spain',
     phone: '+34 690 84 6118',
     bio: 'Full stack Javascript developer',  
-    pictureUrl: 'http://i.imgur.com/5GM2K5X.jpg',
+    pictureUrl: 'https://i.imgur.com/5GM2K5X.jpg',
     socialNetworks: {
       facebook: 'https://www.facebook.com/jsur5000',
       skype: 'julius.suominen',
@@ -109,7 +110,7 @@ const users = [
     country: 'Spain',
     phone: '+34 672 556 545',
     bio: 'Full stack Javascript developer',
-    pictureUrl: 'http://i.imgur.com/s57Micg.jpg',
+    pictureUrl: 'https://i.imgur.com/s57Micg.jpg',
     socialNetworks: {
       facebook: 'https://www.facebook.com/asmilewski',
       skype: 'arkkadio300',
@@ -160,7 +161,7 @@ const users = [
     country: 'Switzerland',
     phone: '+41 786892476',
     bio: "UX/UI/Front-end Unicorn ! Can even do 3d and games!",
-    pictureUrl: 'http://i.imgur.com/9fJ0wlv.jpg',
+    pictureUrl: 'https://i.imgur.com/9fJ0wlv.jpg',
     socialNetworks: {
       slack: '@emilie',
     },
@@ -178,7 +179,7 @@ const users = [
     nationality: ['Czech'],
     phone: '+34 617 576 484',
     bio: "Full stack Javascript developer",
-    pictureUrl: 'http://i.imgur.com/hg9RWmX.jpg',
+    pictureUrl: 'https://i.imgur.com/hg9RWmX.jpg',
     socialNetworks: {
       facebook: 'https://www.facebook.com/petra.spirkova',
       instagram: 'https://www.instagram.com/petraspirk/',
@@ -203,7 +204,7 @@ const users = [
     phone: '+34 622 002 528',
     bio: "I'm Batman. Don't tell to anyone, please. It's a secret.",
     bioFull: "I'm Batman. Don't tell to anyone, please. It's a secret. When I'm not doing my Batman things (or Bat-things) I love to read, to code and to eat. Even better with friends.",
-    pictureUrl: 'http://i.imgur.com/5WgvahL.png',
+    pictureUrl: 'https://i.imgur.com/5WgvahL.png',
     socialNetworks: {
       slack: '@lamez',
     },
@@ -221,7 +222,7 @@ const users = [
     address: 'Hopefully, i will know very soon!',
     phone: '+447856422841',
     bio: "Technology Analyst",
-    pictureUrl: 'http://i.imgur.com/SuYwc06.jpg',
+    pictureUrl: 'https://i.imgur.com/SuYwc06.jpg',
     socialNetworks: {
       slack: '@stephanos',
     },
@@ -243,7 +244,7 @@ const users = [
     country: 'Spain',
     phone: '+34 679 797 722',
     bio: "Technology Analyst",
-    pictureUrl: 'http://i.imgur.com/UklONwP.jpg',
+    pictureUrl: 'https://i.imgur.com/UklONwP.jpg',
     socialNetworks: {
       instagram: "https://www.instagram.com/jaah.mx/",
       skype: 'javila83',
@@ -266,7 +267,6 @@ const users = [
     phone: '+336 49 19 18 08',
     bio: "Technology Analyst",
     bio: "Visual creative technologist : interaction design // Virtual Reality // Photography",
-    pictureUrl: 'http://i.imgur.com/SuYwc06.jpg',
     socialNetworks: {
       slack: '@abravo',
     },
@@ -288,7 +288,7 @@ const users = [
     country: 'Spain',
     phone: '+34 45352342',
     bio: "Cirque du soleil trapeze artist",
-    pictureUrl: 'http://i.imgur.com/uXmtNhE.jpg',
+    pictureUrl: 'https://i.imgur.com/uXmtNhE.jpg',
     socialNetworks: {
       instagram: "https://www.instagram.com/jaah.mx/",
       slack: '@migu3l',

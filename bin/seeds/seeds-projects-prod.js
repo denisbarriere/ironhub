@@ -64,7 +64,7 @@ const projects = [
     endOfModuleProject: 'Module 3',
     tagline: 'Keep track of your spendings',
     shortDescription: 'Keep track of your spendings',
-    description: 'Just a money tracker that doesn\'t work...',
+    description: "Just a money tracker that doesn't work...",
     hashtags: ['#sad','#cash'],
     urls: {
       gitHub: 'https://github.com/AdamanskaHub/moneyTracker',
@@ -75,7 +75,7 @@ const projects = [
     endOfModuleProject: 'Module 3',
     tagline: 'A Trello for job applications',
     shortDescription: 'Keep track of your job applications',
-    description: 'A tool for managing a job applicant\'s applications.',
+    description: "A tool for managing a job applicant's applications.",
     hashtags: ['#job','#povertyavoidance'],
     urls: {
       gitHub: 'https://github.com/jsur/jobs-front',

@@ -27,9 +27,10 @@ router.get('/ironhackers', (req, res, next) => {
   User.find({studentId: { $exists: true }})
     .populate({ 
      path: 'studentId',
+
      populate: {
        path: 'bootcampIds',
-       model: 'Bootcamp'
+       model: 'Bootcamp',
      }
     })
     .exec((err, ironhackerList) => {

@@ -29,8 +29,8 @@ const projects = [
       gitHub: 'https://github.com/denisbarriere/ironhack-game',
       productUrl: 'https://denisbarriere.github.io/ironhack-game/',
       projectImageUrl: 'https://s3.amazonaws.com/media-p.slid.es/uploads/733340/images/3955600/Screen_Shot_2017-06-30_at_12.37.07_pm.png',
-      slidePresentationUrl: 'http://slides.com/denisbarriere/m-y-f-o-l-t',
-      videoPresentationUrl: 'http://youtube.com',
+      slidePresentationUrl: 'https://slides.com/denisbarriere/m-y-f-o-l-t',
+      videoPresentationUrl: 'https://youtube.com',
     }
   },
   {
@@ -49,8 +49,8 @@ const projects = [
         title: "Homepage capture",
         url: "https://s3.amazonaws.com/media-p.slid.es/uploads/733340/images/3955600/Screen_Shot_2017-06-30_at_12.37.07_pm.png"
       }],
-      slidePresentationUrl: 'http://slides.com/denisbarriere/ironhelp',
-      videoPresentationUrl: 'http://youtube.com',
+      slidePresentationUrl: 'https://slides.com/denisbarriere/ironhelp',
+      videoPresentationUrl: 'https://youtube.com',
     }
   },
 ]

@@ -106,10 +106,8 @@ const students = [
   },
   {
     // Andrea Bravo
-    bootcampIds: ['598c85b230b3a200113de089'],
+    bootcampIds: ['598cc45bf3ad284a06468c0f'],
     professionalNetworks: {
-      gitHub: 'https://github.com/blackc0d3',
-      linkedIn: 'https://www.linkedin.com/in/jorge-avila-haro-79462620/',
       webProjects: [
         { 
           title: 'ANDREA BRAVO',

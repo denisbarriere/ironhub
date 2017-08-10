@@ -45,7 +45,7 @@ const users = [
       slack: '@denis.barriere',
     },
     role: 'ADMIN',
-    studentId: '598351360920f7b1a274e536',
+    studentId: '598cc57f0b8bf90004ec779b',
   },
   {
     // Cillian O Murchu
@@ -67,6 +67,7 @@ const users = [
       slack: '@cillian.murchu',
     },
     role: 'USER',
+    studentId: '598cc57f0b8bf90004ec779d'
   },
   {
     // Julius Suominen
@@ -91,7 +92,7 @@ const users = [
       twitter: 'https://twitter.com/jsur',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec779e',
   },
   {
     // Arkadiusz Milewski
@@ -115,7 +116,7 @@ const users = [
       slack: '@arkadiusz.milewski',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec779f',
   },
    {
     // Christiana Koudigkeli
@@ -142,7 +143,7 @@ const users = [
       twitter: 'https://twitter.com/chrikoud',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec77a0',
   },
   {
     // Emilie Gourmanel
@@ -164,7 +165,7 @@ const users = [
       slack: '@emilie',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec77a1',
   },
   {
     // Petra Spirkova
@@ -184,7 +185,7 @@ const users = [
       slack: '@petra.spirkova',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec77a2',
   },
   {
     // Luis Amez
@@ -207,7 +208,7 @@ const users = [
       slack: '@lamez',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec77a3',
   },
   {
     // Stephanos Amez
@@ -225,7 +226,7 @@ const users = [
       slack: '@stephanos',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec77a4',
   },
   {
     // Jorge Avila
@@ -249,7 +250,7 @@ const users = [
       slack: '@jorge.avila',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec77a5',
   },
   {
     // Andrea Bravo
@@ -270,7 +271,7 @@ const users = [
       slack: '@abravo',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec77a6',
   },
   {
     // Miguel Gomes
@@ -293,7 +294,7 @@ const users = [
       slack: '@migu3l',
     },
     role: 'USER',
-    studentId: '598351360920f7b1a274e538',
+    studentId: '598cc57f0b8bf90004ec77a8',
   },
 ]
 

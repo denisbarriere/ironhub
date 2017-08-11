@@ -117,18 +117,19 @@ router.post('/projects', (req, res, next) => {
     });
   }
   if (req.body.endOfModuleProject) { newProject.endOfModuleProject = req.body.endOfModuleProject; }
-  if (req.body.tagline) { updates.tagline = req.body.tagline; }
+  if (req.body.tagline) { newProject.tagline = req.body.tagline; }
   if (req.body.shortDescription) { newProject.shortDescription = req.body.shortDescription; }  
   if (req.body.description) { newProject.description = req.body.description; }
-  if (req.body.hashtags) { updates.hashtags = req.body.hashtags; }
+  if (req.body.hashtags) { newProject.hashtags = req.body.hashtags; }
   if ( req.body.urls ) {
     newProject.urls = {}; // if the .urls is found, then initialise it in the newProject object
     if (req.body.urls.gitHub) { newProject.urls.gitHub = req.body.urls.gitHub; }
     if (req.body.urls.screenshots) { 
       newProject.urls.screenshots = [];
       req.body.urls.screenshots.forEach((screenshot, index) => {
-        if (screenshot.title) { newProject.urls.screenshots[index].title = screenshot.title; }
-        if (screenshot.url) { newProject.urls.screenshots[index].url = screenshot.title; }
+        if (screenshot.title && screenshot.url) { 
+          newProject.urls.screenshots.push(screenshot) 
+        }
       });
     }
     if (req.body.urls.productUrl) { newProject.urls.productUrl = req.body.urls.productUrl; }
@@ -199,8 +200,6 @@ router.put('/projects/:id', (req, res) => {
     return;
   }
 
-  console.log(req.body);
-
   // Retrieve the information to update
   // For each value, check if it is found in request before processing it
   let updates = {}
@@ -222,8 +221,9 @@ router.put('/projects/:id', (req, res) => {
     if (req.body.urls.screenshots) { 
       updates.urls.screenshots = [];
       req.body.urls.screenshots.forEach((screenshot, index) => {
-        if (screenshot.title) { updates.urls.screenshots[index].title = screenshot.title; }
-        if (screenshot.url) { updates.urls.screenshots[index].url = screenshot.title; }
+        if (screenshot.title && screenshot.url) { 
+          updates.urls.screenshots.push(screenshot) 
+        }
       });
     }
     if (req.body.urls.productUrl) { updates.urls.productUrl = req.body.urls.productUrl; }

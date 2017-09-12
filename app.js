@@ -14,7 +14,7 @@ require('dotenv').config()
 const passport = require('./config/passport');
 
 // Database connection
-const database = require('./config/database');
+require('./config/database');
 
 
 /**

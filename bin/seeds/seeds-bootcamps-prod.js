@@ -3,8 +3,6 @@
 **/
 const mongoose = require('mongoose');
 const Bootcamp = require('../../models/bootcamp-model');
-require("dotenv").config(); // To connect to the database
-
 
 /**
  * MIDDLEWARE CONFIGURATION

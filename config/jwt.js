@@ -2,7 +2,6 @@
  * MIDDLEWARE IMPORT
 **/
 const passportJwt = require('passport-jwt');
-require("dotenv").config();
 
 /**
  * MIDDLEWARE CONFIGURATION

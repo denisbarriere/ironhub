@@ -4,6 +4,7 @@
 const mongoose = require('mongoose');
 const Bootcamp = require('../../models/bootcamp-model');
 
+
 /**
  * MIDDLEWARE CONFIGURATION
 **/

@@ -3,7 +3,6 @@
  * MIDDLEWARE IMPORT
 **/
 const mongoose = require('mongoose');
-const env = require("dotenv").config();
 
 /**
  * MIDDLEWARE CONFIGURATION

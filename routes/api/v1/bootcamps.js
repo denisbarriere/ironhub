@@ -4,7 +4,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Bootcamp = require('../../../models/bootcamp-model');
-const Student = require('../../../models/student-model');
 
 
 /**

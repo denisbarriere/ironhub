@@ -2,11 +2,9 @@
  * MIDDLEWARE IMPORT
 **/
 const express = require('express');
-const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const env = require("dotenv").config();
 
 /**
  * MIDDLEWARE CONFIGURATION
@@ -38,8 +36,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Enable communication between the express API and the Angular 2 front-end
 app.use(cors());
-
-//app.use(express.static(path.join(__dirname, 'public')));
 
 
 /**

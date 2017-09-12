@@ -266,7 +266,7 @@ const users = [
     country: 'Spain',
     phone: '+336 49 19 18 08',
     bio: "Technology Analyst",
-    bio: "Visual creative technologist : interaction design // Virtual Reality // Photography",
+    bioFull: "Visual creative technologist : interaction design // Virtual Reality // Photography",
     socialNetworks: {
       slack: '@abravo',
     },

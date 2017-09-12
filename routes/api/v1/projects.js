@@ -323,8 +323,8 @@ router.delete('/projects/:id', (req, res) => {
       res.status(400).json(err);
       return;
     }
-console.log(removed.documents);
-    if(!removed || removed.length === 0) {
+
+    if(removed.length === 0) {
       res.status(404).json({
         message: 'Project not found'
       });

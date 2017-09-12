@@ -40,7 +40,6 @@ const userSchema = new mongoose.Schema({
   bioFull: String,
   pictureUrl: { 
     type: mongoose.SchemaTypes.Url,
-    default: 'http://learnonline.canberra.edu.au/theme/image.php/uc/core/1499280925/u/f1'
   },
   socialNetworks: {
     facebook: mongoose.SchemaTypes.Url,

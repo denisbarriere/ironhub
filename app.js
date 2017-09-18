@@ -5,7 +5,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config()
+require('dotenv').config();
 
 /**
  * MIDDLEWARE CONFIGURATION
@@ -20,10 +20,11 @@ require('./config/database');
 /**
  * ROUTE FILES
 **/
+const userAuth = require('./routes/api/v1/user-auth');
 const bootcampsApiRoutes = require('./routes/api/v1/bootcamps');
 const ironhackersApiRoutes = require('./routes/api/v1/ironhackers');
 const projectsApiRoutes = require('./routes/api/v1/projects');
-const userAuth = require('./routes/api/v1/user-auth');
+const uploadApiRoutes = require('./routes/api/v1/uploads');
 
 
 /**
@@ -46,6 +47,7 @@ app.use('/api/v1/', userAuth);
 app.use('/api/v1/', passport.authenticate('jwt', {session: false}), bootcampsApiRoutes);
 app.use('/api/v1/', passport.authenticate('jwt', {session: false}), ironhackersApiRoutes);
 app.use('/api/v1/', passport.authenticate('jwt', {session: false}), projectsApiRoutes);
+app.use('/api/v1/', passport.authenticate('jwt', {session: false}), uploadApiRoutes);
 
 
 // catch 404 and forward to error handler
